@@ -1,7 +1,7 @@
 # WeCom Bridge
 
-[![CI](https://github.com/ChenRayMinecraft/WeComBot/actions/workflows/ci.yml/badge.svg)](https://github.com/ChenRayMinecraft/WeComBot/actions/workflows/ci.yml)
-[![Release](https://github.com/ChenRayMinecraft/WeComBot/actions/workflows/release.yml/badge.svg)](https://github.com/ChenRayMinecraft/WeComBot/actions/workflows/release.yml)
+[![CI](https://github.com/ALingqing/WeComBot/actions/workflows/ci.yml/badge.svg)](https://github.com/ChenRayMinecraft/WeComBot/actions/workflows/ci.yml)
+[![Release](https://github.com/ALingqing/WeComBot/actions/workflows/release.yml/badge.svg)](https://github.com/ChenRayMinecraft/WeComBot/actions/workflows/release.yml)
 [![npm version](https://img.shields.io/badge/npm-1.0.0-blue)]()
 [![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
