@@ -150,4 +150,18 @@ function sleep(ms) {
     return new Promise(r => setTimeout(r, ms));
 }
 
-module.exports = { logger, retry, isServerError, validateConfig, truncate, sleep };
+/**
+ * 获取数据目录（用于 config.json / data.json）
+ * pkg 打包后 __dirname 指向虚拟文件系统，
+ * 使用此函数确保文件读写真实文件系统路径。
+ */
+function getDataDir() {
+    // pkg 打包后 process.pkg 存在，execPath 为 exe 路径
+    if (process.pkg) {
+        return require('path').dirname(process.execPath);
+    }
+    // 开发模式使用 __dirname
+    return __dirname;
+}
+
+module.exports = { logger, retry, isServerError, validateConfig, truncate, sleep, getDataDir };

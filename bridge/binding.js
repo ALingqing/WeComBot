@@ -10,13 +10,13 @@
 
 const fs = require('fs');
 const path = require('path');
-const { logger } = require('./util');
+const { logger, getDataDir } = require('./util');
 
 function createBinding(config) {
     const bc = config.binding || {};
     const mode = bc.mode || 'TWO_WAY';
     const adminUsers = bc.admin_users || [];
-    const dataFile = path.join(__dirname, 'data.json');
+    const dataFile = path.join(getDataDir(), 'data.json');
     let data = null;
 
     function ensureLoaded() {

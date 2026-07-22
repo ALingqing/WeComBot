@@ -24,17 +24,29 @@
     "package.json",
     "README.md"
   ],
+  "bin": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "node --inspect index.js",
     "lint": "node -e \"const f=['index.js','api.js','wecom.js','binding.js','handler-loader.js','util.js'];let e=0;f.forEach(fn=>{try{require('fs').readFileSync(require('path').join(__dirname,fn),'utf8')}catch(err){console.error('MISSING:'+fn);e++}});process.exit(e);\"",
     "test": "node -e \"console.log('OK: wecom-bridge v1.0.0');process.exit(0);\"",
-    "prepublishOnly": "npm run lint"
+    "prepublishOnly": "npm run lint",
+    "build": "pkg . --targets node22-win-x64 --output ../dist/WeComBridge.exe",
+    "build-all": "pkg . --targets node22-win-x64,node22-linux-x64,node22-macos-x64 --output ../dist/WeComBridge"
+  },
+  "pkg": {
+    "assets": [
+      "handlers/**/*"
+    ],
+    "compress": "GZip"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "engines": { "node": ">=18.0.0" },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^5.20.0"
+  },
   "dependencies": {
     "express": "^4.21.0",
     "axios": "^1.7.7"

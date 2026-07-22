@@ -19,14 +19,14 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const { logger, validateConfig } = require('./util');
+const { logger, validateConfig, getDataDir } = require('./util');
 const { createWeCom } = require('./wecom');
 const { loadHandler } = require('./handler-loader');
 const { createBinding } = require('./binding');
 const { createApi } = require('./api');
 
 // ---- 加载配置 ----
-const configPath = path.join(__dirname, 'config.json');
+const configPath = path.join(getDataDir(), 'config.json');
 let config;
 try {
     config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
