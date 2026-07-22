@@ -31,6 +31,9 @@
     "test": "node -e \"console.log('OK: wecom-bridge v1.0.0');process.exit(0);\"",
     "prepublishOnly": "npm run lint"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "engines": { "node": ">=18.0.0" },
   "dependencies": {
     "express": "^4.21.0",
