@@ -1,15 +1,15 @@
 {
-  "name": "@chenray/wecom-bridge",
+  "name": "@alingqing/wecom-bridge",
   "version": "1.0.0",
   "description": "企业微信通用消息桥接器 - 接收企业微信群消息，通过 Handler 转发到任意后端服务",
   "keywords": ["wecom", "wechat-work", "企业微信", "webhook", "bridge", "messaging"],
-  "homepage": "https://github.com/ChenRayMinecraft/WeComBot#readme",
-  "bugs": { "url": "https://github.com/ChenRayMinecraft/WeComBot/issues" },
+  "homepage": "https://github.com/ALingqing/WeComBot#readme",
+  "bugs": { "url": "https://github.com/ALingqing/WeComBot/issues" },
   "license": "MIT",
   "author": "ChenRay <chenray@example.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChenRayMinecraft/WeComBot.git"
+    "url": "git+https://github.com/ALingqing/WeComBot.git"
   },
   "main": "index.js",
   "files": [
