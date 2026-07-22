@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "启动桥接器",
+      "cwd": "${workspaceFolder}/bridge",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--inspect"],
+      "args": ["index.js"],
+      "env": { "LOG_LEVEL": "DEBUG" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

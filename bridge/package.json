@@ -1,0 +1,39 @@
+{
+  "name": "@chenray/wecom-bridge",
+  "version": "1.0.0",
+  "description": "企业微信通用消息桥接器 - 接收企业微信群消息，通过 Handler 转发到任意后端服务",
+  "keywords": ["wecom", "wechat-work", "企业微信", "webhook", "bridge", "messaging"],
+  "homepage": "https://github.com/ChenRayMinecraft/WeComBot#readme",
+  "bugs": { "url": "https://github.com/ChenRayMinecraft/WeComBot/issues" },
+  "license": "MIT",
+  "author": "ChenRay <chenray@example.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenRayMinecraft/WeComBot.git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "api.js",
+    "wecom.js",
+    "binding.js",
+    "handler-loader.js",
+    "util.js",
+    "handlers/",
+    "config.json",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --inspect index.js",
+    "lint": "node -e \"const f=['index.js','api.js','wecom.js','binding.js','handler-loader.js','util.js'];let e=0;f.forEach(fn=>{try{require('fs').readFileSync(require('path').join(__dirname,fn),'utf8')}catch(err){console.error('MISSING:'+fn);e++}});process.exit(e);\"",
+    "test": "node -e \"console.log('OK: wecom-bridge v1.0.0');process.exit(0);\"",
+    "prepublishOnly": "npm run lint"
+  },
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {
+    "express": "^4.21.0",
+    "axios": "^1.7.7"
+  }
+}

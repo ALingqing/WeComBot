@@ -1,0 +1,28 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 5700
+  },
+  "wecom": {
+    "webhook_url": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_KEY_HERE",
+    "corp_id": "",
+    "agent_id": "",
+    "secret": "",
+    "token": "",
+    "encoding_aes_key": ""
+  },
+  "handler": {
+    "name": "webhook",
+    "config": {
+      "event_url": "http://127.0.0.1:8080/wecom-event",
+      "secret": "",
+      "timeout": 5000
+    }
+  },
+  "binding": {
+    "enabled": false,
+    "mode": "TWO_WAY",
+    "store_type": "json",
+    "admin_users": []
+  }
+}
